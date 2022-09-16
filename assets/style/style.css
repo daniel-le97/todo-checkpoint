@@ -1,1 +1,18 @@
 /* BASIC STYLES HERE */
+main {
+  background-image: url();
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.font-large {
+  font-size: 100px;
+}
+section {
+  height: 15vh;
+}
+
+.larger {
+  height: 70vh;
+}
