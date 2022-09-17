@@ -1,4 +1,4 @@
-import { setHTML } from "../Utils/Writer.js";
+import { setHTML, setText } from "../Utils/Writer.js";
 let toggle = true;
 
 function drawTime() {
@@ -10,9 +10,11 @@ function drawTime() {
   });
   
   if (toggle == false) {
-    setHTML("time", twelve);
+    setHTML("time", twelve)
+    setText("time-format", "12 HR");;
   } else {
-    setHTML("time", twentyFour);
+    setHTML("time", twentyFour)
+    setText('time-format', '24 HR');
   }
 }
 

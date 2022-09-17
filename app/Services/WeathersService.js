@@ -1,5 +1,6 @@
 import { appState } from "../AppState.js";
 import { Weather } from "../Models/Weather.js";
+import { setHTML } from "../Utils/Writer.js";
 import { BcwServer } from "./AxiosService.js";
 
 class WeathersService {
@@ -7,7 +8,8 @@ class WeathersService {
     const res = await BcwServer.get("/weather");
     console.log(res.data);
     appState.weather = new Weather(res.data)
-    console.log(appState.weather);
+    setHTML('weather', appState.weather.WeatherTemplate)
+    // console.log(appState.weather.weather);
   }
   //
 }

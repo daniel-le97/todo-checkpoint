@@ -7,7 +7,7 @@ main {
 }
 
 .font-large {
-  font-size: 100px;
+  font-size: 70px;
 }
 section {
   height: 15vh;
@@ -16,3 +16,4 @@ section {
 .larger {
   height: 70vh;
 }
+

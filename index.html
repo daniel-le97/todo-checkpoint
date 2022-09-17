@@ -34,42 +34,72 @@
       outline-offset: -3px;
     }
   </style>
+  <!-- <img src="https://openweathermap.org/img/wn/10d.png" alt=""> -->
   <body class="debug">
     <main class="">
+      <!-- weather SECTION -->
+      <section class="container-fluid">
+        <div class="row justify-content-between">
+          <div class="col-3"></div>
+
+          <div class="col-3">
+            <button
+              class="btn btn-primary"
+              onclick="app.imagesController.getImage()">
+              New Image
+            </button>
+            <button
+              class="btn btn-primary"
+              onclick="app.quotesController.getQuote()">
+              New Quote
+            </button>
+          </div>
+          <div class="col-6" id="weather">
+            <!-- <div
+              class="card m-5"
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample">
+              <div class="card-body d-flex justify-content-around">
+                <div>
+                  <span>60</span>
+                  <i class="mdi mdi-temperature-fahrenheit"></i>
+                </div>
+                <div id="weather-icon">👻</div>
+                <span>sunny</span>
+              </div>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                <span>feels like</span>
+                <span></span>
+                </div>
+                
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <!-- time SECTION -->
       <section class="container-fluid">
         <div class="row">
-          <div class="col-3">
-            
-          <div class="col-3">
-            <button class="btn btn-primary" onclick="app.imagesController.getImage()">New Image</button>
-            <button class="btn btn-primary" onclick="app.quotesController.getQuote()">New Quote</button>
+          <div class="col-md-6">
+            <div class="text-center on-hover text-light fs-4">
+              <span id="time-format"></span>
+            </div>
+            <div
+              class="text-center d-flex align-items-center justify-content-center selectable text-light font-large"
+              id="time"
+              onclick="app.timesController.myTime()"></div>
           </div>
-          <div class="col-3"></div>
         </div>
       </section>
-      <section>
-        <div
-          class="text-center d-flex align-items-center justify-content-center selectable text-light font-large" id="time" onclick="app.timesController.myTime()">
-          <!-- <button id="time" onclick="app.timesController.myTime()">
-             <span class="text-light font-large" id="hours"></span>
-          <span id="minutes" class="text-light font-large"></span>
-          <span id="seconds" class="text-light font-large"></span>
-          </button> -->
-          <!-- <span class="text-light font-large" id="hours"></span>
-          <span id="minutes" class="text-light font-large"></span>
-          <span id="seconds" class="text-light font-large"></span> -->
-        </div>
-      </section>
+      <!-- quotes SECTION -->
       <section class="larger container-fluid d-flex">
         <div class="row justify-content-end">
           <div class="col-md-6">
-            <p class="text-light fw-bolder fs-1" id="quote">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-              deserunt doloribus culpa inventore assumenda soluta, enim illum
-              alias! Doloremque placeat officia expedita vel earum, labore
-              praesentium cupiditate dolorem rem eum veniam hic itaque quas
-              dicta, nobis temporibus id laboriosam exercitationem.
-            </p>
+            <p class="text-light fw-bolder fs-1" id="quote"></p>
             <div class="text-center">
               <span class="text-light fs-1">~author</span>
             </div>
@@ -103,7 +133,11 @@
                     <div class="card-footer">
                       <form onsubmit="app.todosController.addTodo()">
                         <div class="col-md-12 d-flex">
-                          <input type="text " class="" name="description"required/>
+                          <input
+                            type="text "
+                            class=""
+                            name="description"
+                            required />
                           <button class="btn btn-primary" type="submit">
                             Add Todo
                           </button>
