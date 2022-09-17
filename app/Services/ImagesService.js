@@ -5,7 +5,7 @@ import { BcwServer } from "./AxiosService.js";
 class ImagesService {
   async getImage() {
     const res = await BcwServer.get("/images/");
-    console.log("getImage", res.data);
+    // console.log("getImage", res.data);
     appState.image = new Image(res.data);
   }
   //
