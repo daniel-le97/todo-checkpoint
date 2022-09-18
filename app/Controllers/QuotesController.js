@@ -5,7 +5,8 @@ import { setText } from "../Utils/Writer.js";
 
 function _drawQuote() {
   let newQuote = appState.quote;
-  setText("quote", newQuote.content);
+  setText("quote", newQuote.content)
+  setText('author', newQuote.author)
 }
 
 export class QuotesController {

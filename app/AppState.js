@@ -19,7 +19,12 @@ class AppState extends EventEmitter {
   quote = null;
 
   /** @type {import('./Models/Weather').Weather | null} */
-  weather = null;
+  weather = null
+
+  toggleTemp = 1
+
+  temperature = 0
+
 }
 
 export const appState = new Proxy(new AppState(), {

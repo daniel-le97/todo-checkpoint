@@ -34,7 +34,7 @@
       outline-offset: -3px;
     }
   </style>
-  <!-- <img src="https://openweathermap.org/img/wn/10d.png" alt=""> -->
+
   <body class="debug">
     <main class="">
       <!-- weather SECTION -->
@@ -43,47 +43,27 @@
           <div class="col-3"></div>
 
           <div class="col-3">
-            <button
-              class="btn btn-primary"
-              onclick="app.imagesController.getImage()">
-              New Image
-            </button>
-            <button
-              class="btn btn-primary"
-              onclick="app.quotesController.getQuote()">
-              New Quote
-            </button>
+            <div class="d-flex justify-content-evenly">
+              <button
+                class="btn btn-sm bg-opacity-25 bg-black"
+                onclick="app.imagesController.getImage()">
+                > Image
+              </button>
+              <button
+                class="btn btn-sm bg-opacity-25 bg-black"
+                onclick="app.quotesController.getQuote()">
+                > Quote
+              </button>
+            </div>
           </div>
           <div class="col-6" id="weather">
-            <!-- <div
-              class="card m-5"
-              data-bs-toggle="collapse"
-              href="#collapseExample"
-              role="button"
-              aria-expanded="false"
-              aria-controls="collapseExample">
-              <div class="card-body d-flex justify-content-around">
-                <div>
-                  <span>60</span>
-                  <i class="mdi mdi-temperature-fahrenheit"></i>
-                </div>
-                <div id="weather-icon">👻</div>
-                <span>sunny</span>
-              </div>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                <span>feels like</span>
-                <span></span>
-                </div>
-                
-              </div>
-            </div> -->
+            <!-- weather drawn here STUB -->
           </div>
         </div>
       </section>
       <!-- time SECTION -->
       <section class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-md-6">
             <div class="text-center on-hover text-light fs-4">
               <span id="time-format"></span>
@@ -96,58 +76,22 @@
         </div>
       </section>
       <!-- quotes SECTION -->
-      <section class="larger container-fluid d-flex">
-        <div class="row justify-content-end">
-          <div class="col-md-6">
-            <p class="text-light fw-bolder fs-1" id="quote"></p>
-            <div class="text-center">
-              <span class="text-light fs-1">~author</span>
-            </div>
-          </div>
+      <section class="container-fluid">
+        <div class="row flex-wrap">
           <div
-            class="col-md-4 d-flex align-content-center justify-content-center">
-            <div
-              class="container-fluid d-flex align-items-center justify-content-center">
-              <div class="row justify-content-center align-items-center">
-                <div class="col-md-12">
-                  <div class="card" style="width: fit-content">
-                    <div class="card-header">Featured</div>
-                    <div class="card-body">
-                      <ul class="list-group list-group-flush" id="todos-list">
-                        <li class="list-group-item">
-                          <div class="d-flex justify-content-between">
-                            <input type="checkbox" name="" id="" />
-                            <span>stuff</span>
-                            <i class="mdi mdi-delete-forever"></i>
-                          </div>
-                        </li>
-                        <li class="list-group-item">
-                          <div class="d-flex justify-content-between">
-                            <input type="checkbox" name="" id="" />
-                            <span>stuff</span>
-                            <i class="mdi mdi-delete-forever"></i>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="card-footer">
-                      <form onsubmit="app.todosController.addTodo()">
-                        <div class="col-md-12 d-flex">
-                          <input
-                            type="text "
-                            class=""
-                            name="description"
-                            required />
-                          <button class="btn btn-primary" type="submit">
-                            Add Todo
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
+            class="col-md-8 d-flex justify-content-center align-items-center">
+            <div class="">
+              <p class="text-light fw-bold fs-2 text-center" id="quote">
+                <!-- drawing quotes Here STUB -->
+              </p>
+              <div class="text-center on-hover">
+                <span class="text-light fs-1">~ <span id="author"></span></span>
               </div>
             </div>
+          </div>
+          <!-- SECTION TODO-->
+          <div class="col-md-4" id="todo-card">
+            <!-- draw todos -->
           </div>
         </div>
       </section>
