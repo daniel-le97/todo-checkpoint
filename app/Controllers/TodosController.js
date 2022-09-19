@@ -69,8 +69,8 @@ export class TodosController {
     try {
       if (await Pop.confirm("are you done with this ToDo?")) {
         await todosService.removeTodo(id);
+        Pop.toast("deleted");
       }
-      Pop.toast("deleted");
     } catch (error) {
       console.error("[]", error);
       Pop.error(error);
