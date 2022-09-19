@@ -14,34 +14,34 @@ function _drawTodos() {
 }
 function _drawTodoCard() {
   let template = "";
-  template += `
-                  <div class="card m-4 mt-md-5 mt-sm-0 scroll" >
-                    <div class="card-header d-flex justify-content-between">
-                      <div>ToDo Tasks</div>
-                      <div><span id="count"></span> left</div>
-                    </div>
-                    <div class="card-body scroll">
-                      <ul class="list-group list-group-flush" id="todos-list">
-                        <!-- drawing todos here STUB -->
-                        
-                      </ul>
-                    </div>
-                    <div class="card-footer">
-                      <form onsubmit="app.todosController.addTodo()">
-                        <div class="col-md-12 d-flex">
-                          <input
-                            type="text "
-                            class=""
-                            name="description"
-                            maxlength="25"
-                            required />
-                          <button class="btn btn-primary" type="submit">
-                            Add Todo
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+  template += /*html*/`
+    <div class="card glass w-100 " >
+      <div class="card-header d-flex justify-content-between">
+        <div class="text-shadow">ToDo Tasks</div>
+        <div><span id="count"></span> left</div>
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush overflow-auto height"  id="todos-list">
+          <!-- drawing todos here STUB -->
+          
+        </ul>
+      </div>
+      <div class="card-footer ">
+        <form onsubmit="app.todosController.addTodo()">
+          <div class="col-md-12 d-flex justify-content-evenly">
+            <input
+              type="text "
+              class="w-auto"
+              name="description"
+              maxlength=""
+              required />
+            <button class="btn btn-primary" type="submit">
+              Add Todo
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     
     
     
@@ -81,7 +81,7 @@ export class TodosController {
     try {
       window.event.preventDefault();
 
-      if (appState.todos.length >= 7) {
+      if (appState.todos.length >= 10) {
         await Pop.toast(
           "Work on completing some todos before adding more!",
           "warning",

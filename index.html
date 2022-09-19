@@ -35,66 +35,68 @@
     }
   </style>
 
-  <body class="debug">
+  <body class="overflow-scroll">
     <main class="">
       <!-- weather SECTION -->
       <section class="container-fluid">
         <div class="row justify-content-between">
-          <div class="col-3"></div>
 
-          <div class="col-3">
-            <div class="d-flex justify-content-evenly">
+          <div class="col-3 d-md-flex justify-content-center align-items-center">
+            <div class="m-2 text-center">
               <button
-                class="btn btn-sm bg-opacity-25 bg-black"
+                class="btn btn-sm bg-opacity-25 bg-black text-light m-1 text-shadow"
                 onclick="app.imagesController.getImage()">
                 > Image
               </button>
               <button
-                class="btn btn-sm bg-opacity-25 bg-black"
+                class="btn btn-sm bg-opacity-25 bg-black text-light m-1 text-shadow"
                 onclick="app.quotesController.getQuote()">
                 > Quote
               </button>
             </div>
           </div>
-          <div class="col-6" id="weather">
+          <div class="col-9 col-md-6" id="weather">
             <!-- weather drawn here STUB -->
           </div>
         </div>
       </section>
       <!-- time SECTION -->
-      <section class="container-fluid">
+      <section class="container h-auto">
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <div class="text-center on-hover text-light fs-4">
-              <span id="time-format"></span>
+            <div class="text-center on-hover fs-4">
+              <span id="time-format" class="text-shadow mt-3"></span>
             </div>
             <div
-              class="text-center d-flex align-items-center justify-content-center selectable text-light font-large"
+              class="text-center d-flex align-items-center justify-content-center selectable text-shadow font-large"
               id="time"
-              onclick="app.timesController.myTime()"></div>
+              onclick="app.timesController.myTime()">
+            <!-- time drawn here -->
+            </div>
           </div>
         </div>
       </section>
       <!-- quotes SECTION -->
-      <section class="container-fluid">
-        <div class="row flex-wrap">
+      <section class="container-fluid h-100 mt-md-5 mt-3">
+        <div class="row">
           <div
             class="col-md-8 d-flex justify-content-center align-items-center">
             <div class="">
-              <p class="text-light fw-bold fs-2 text-center" id="quote">
+              <p class="text-shadow fw-bold font-small text-center" id="quote">
                 <!-- drawing quotes Here STUB -->
               </p>
               <div class="text-center on-hover">
-                <span class="text-light fs-1">~ <span id="author"></span></span>
+                <span class="text-shadow fst-italic font-small">~ <span id="author"></span></span>
               </div>
             </div>
           </div>
           <!-- SECTION TODO-->
-          <div class="col-md-4" id="todo-card">
+          <div class="col-md-4 mt-3 d-flex justify-content-center align-items-center" id="todo-card">
             <!-- draw todos -->
           </div>
         </div>
       </section>
+      <section class="text-shadow fixed-bottom ms-2" id="image-author">hello</section>
     </main>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"

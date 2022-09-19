@@ -10,28 +10,17 @@ export class Weather {
   get WeatherTemplate() {
     return /*html*/ `
       <div
-        class="card mx-2 mx-sm-0 my-4"
-        data-bs-toggle="collapse"
-        href="#collapseExample"
-        role="button"
-        aria-expanded="false"
-        aria-controls="collapseExample">
-        <div class="card-body d-flex justify-content-between flex-wrap">
+        class="card mx-3 my-md-4 my-3 glass">
+        <div class="card-body d-flex justify-content-between gap-3 ">
           <div class="d-flex align-items-center">
-            <span id="temperature" onclick="app.weathersController.changeTemp()" class="ms-3">${this.ConvertTemp}</span>
+            <span id="temperature" onclick="app.weathersController.changeTemp()" class="ms-3 font-small selectable rounded elevation-1 p-1 bg-opacity-10 text-shadow">${this.ConvertTemp}</span>
           </div>
             <div>
             <img src="https://openweathermap.org/img/wn/${this.icon}.png" alt="">
             </div>
-            <div class="d-flex align-items-center ">
-            <span class="me-md-3 me-sm-0 ms-4">${this.description}</span>
+            <div class="d-flex align-items-center">
+            <span class="me-3 font-small text-center text-shadow">${this.description}</span>
             </div>
-          </div>
-          <div class="collapse" id="collapseExample">
-          <div class="card card-body">
-            <span>feels like</span>
-            <span></span>
-          </div>
           </div>
         </div>
     `;
@@ -48,15 +37,15 @@ export class Weather {
 
     if (appState.toggleTemp == 1) {
       // @ts-ignore
-      appState.temperature = kelvin + "˚K";
+      appState.temperature = fahrenheit + "˚F";
     } else if (appState.toggleTemp == 2) {
       // @ts-ignore
-      appState.temperature = fahrenheit + "˚F";
+      appState.temperature = celsius + "˚C";
     } else if (appState.toggleTemp == 3) {
       // @ts-ignore
-      appState.temperature = celsius + "˚C";
+      appState.temperature = kelvin + "˚K"
     }
-
     return appState.temperature;
   }
-}
+  }
+  

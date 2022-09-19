@@ -29,7 +29,6 @@ export class WeathersController {
     try {
       appState.toggleTemp++
       await this.getWeather();
-      console.log(appState.toggleTemp);
     } catch (error) {
       console.error("[]", error);
       Pop.error(error);

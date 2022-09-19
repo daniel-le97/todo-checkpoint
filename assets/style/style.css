@@ -8,19 +8,46 @@ main {
 }
 
 .font-large {
-  font-size: 70px;
+  font-size: 3rem;
 }
-section {
+.font-small {
+  font-size: 1.5rem;
+}
+/* section {
   height: 15vh;
-}
+} */
 
 .larger {
   height: 70vh;
 }
-*{
+* {
   user-select: none;
 }
-.scroll{
+.scroll {
   overflow-y: auto;
 }
+.text-shadow {
+  color: aliceblue;
+  text-shadow: 2px 2px black, 0px 0px 5px rgba(242, 156, 9, 0.719);
+  font-weight: bold;
+  letter-spacing: 0.08rem;
+}
+.height{
+  max-height: 35vh;
+}
+@media screen AND (max-width: 768px) {
+  .font-large {
+    font-size: 35px;
+  }
+  .font-small{
+    font-size: 1rem;
+  }
+  .height{
+  max-height: 25vh;
+}
+}
+.glass{
+  background-color: rgba(255, 255, 255, 0.601);
+}
+
 

@@ -9,13 +9,13 @@ export class Todo {
   get TodoTemplate() {
     return /*html*/ `
     
-    <li class="list-group-item">
+    <li class="list-group-item text-break p-1">
       <div class="d-flex justify-content-between">
         <input type="checkbox" name="" id="" onchange="app.todosController.checkTodo('${this.id}')" ${this.completed ? "checked" : ""} />
         <div class=" d-flex flex-wrap">
-        <span>${this.description}</span>
+        <span class="mx-2">${this.description}</span>
         </div>
-        <i class="mdi mdi-delete-forever" onclick="app.todosController.removeTodo('${this.id}')"></i>
+        <i class="mdi mdi-delete-forever d-flex align-items-center" onclick="app.todosController.removeTodo('${this.id}')"></i>
       </div>
     </li>
     `;
