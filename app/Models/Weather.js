@@ -38,14 +38,17 @@ export class Weather {
     if (appState.toggleTemp == 1) {
       // @ts-ignore
       appState.temperature = fahrenheit + "˚F";
-    } else if (appState.toggleTemp == 2) {
+    }
+
+    if (appState.toggleTemp == 2) {
       // @ts-ignore
       appState.temperature = celsius + "˚C";
-    } else if (appState.toggleTemp == 3) {
+    }
+
+    if (appState.toggleTemp == 3) {
       // @ts-ignore
-      appState.temperature = kelvin + "˚K"
+      appState.temperature = kelvin + "˚K";
     }
     return appState.temperature;
   }
-  }
-  
+}

@@ -14,11 +14,11 @@ function _drawTodos() {
 }
 function _drawTodoCard() {
   let template = "";
-  template += /*html*/`
+  template += /*html*/ `
     <div class="card glass w-100 " >
       <div class="card-header d-flex justify-content-between">
         <div class="text-shadow">ToDo Tasks</div>
-        <div><span id="count"></span> left</div>
+        <div><span id="count" class="text-shadow"></span> left</div>
       </div>
       <div class="card-body">
         <ul class="list-group list-group-flush overflow-auto height"  id="todos-list">
